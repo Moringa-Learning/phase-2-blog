@@ -1,0 +1,25 @@
+#headerCont {
+  height: 10vh;
+}
+
+#headerCont h1 {
+  color: green;
+}
+
+.mainblog .blogCont {
+  border-bottom: 1px solid black;
+}
+
+.mainblog .blogCont img {
+  width: 100%;
+  max-width: 300px;
+}
+
+.mainblog .blogCont span {
+  font-size: 14px;
+}
+
+.mainblog .blogCont p {
+  font-size: 16px;
+}
+/*# sourceMappingURL=compStyles.css.map */

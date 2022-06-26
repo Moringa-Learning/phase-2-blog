@@ -1,0 +1,23 @@
+#headerCont{
+  height: 10vh;
+  h1{
+    color: green;
+  }
+}
+
+.mainblog{
+  .blogCont{
+  border-bottom: 1px solid black;
+    img{
+      width: 100%;
+      max-width: 300px;
+    }
+    span{
+      font-size: 14px;
+    }
+    p{
+      font-size: 16px;
+    }
+  }
+
+}

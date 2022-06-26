@@ -9,9 +9,9 @@ function NavigationBar(){
 
         <Navbar id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Blog</Nav.Link>
-            <Nav.Link href='#'>Photos</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/blog">Blog</Nav.Link>
+            <Nav.Link href='/photo'>Photos</Nav.Link>
           </Nav>
         </Navbar>
       </Container>

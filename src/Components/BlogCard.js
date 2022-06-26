@@ -1,6 +1,7 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
+import {Link} from 'react-router-dom'
 
 function BlogCard(props){
   const blogObject = props.blogdt
@@ -13,7 +14,8 @@ function BlogCard(props){
         <Container fluid className='d-flex justify-content-between'>
           <span>{blogObject.postedDate} </span>
           <span>{blogObject.readTime}min read</span>
-          <Button variant='outline-secondary' size='sm'>Read More</Button>{' '}
+          <Link to={`/blogdetail/${blogObject.id}`}><Button variant='outline-secondary' size='sm'>Read More</Button>{' '}</Link>
+          
         </Container>
       </div>
     </Container>

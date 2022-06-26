@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import './styles/compStyles.css'
 
-function Header(){
+function Header() {
   return (
     <Container id='headerCont'>
       <Row className='pt-2'>

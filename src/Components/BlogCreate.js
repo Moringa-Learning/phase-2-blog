@@ -12,7 +12,7 @@ function BlogCreate(){
     id: nanoid(),
     image: '',
     blogdata: '',
-    readtime: 0,
+    readTime: 0,
     postedDate: `${current.getDate()}-${current.getMonth() + 1}-${current.getFullYear()}`,
     title: ''
   });
@@ -83,7 +83,7 @@ function BlogCreate(){
 
             <InputGroup className="mb-3">
               <InputGroup.Text id="blogreadtime">Blog Read Time</InputGroup.Text>
-              <Form.Control type="number" name='readtime' onChange={handleChange} value={formData.readtime} placeholder="Blog Read Time" aria-label="Blog Read Time" aria-describedby="blogreadtime" />
+              <Form.Control type="number" name='readTime' onChange={handleChange} value={formData.readtime} placeholder="Blog Read Time" aria-label="Blog Read Time" aria-describedby="blogreadtime" />
             </InputGroup>
 
             <div className="d-flex justify-content-center align-items-center">

@@ -7,12 +7,15 @@
 }
 
 .mainblog .blogCont {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.199);
+  border-radius: 0 0 0 30px;
 }
 
 .mainblog .blogCont img {
   width: 100%;
   max-width: 300px;
+  background-color: blue;
+  border-radius: 5px;
 }
 
 .mainblog .blogCont span {

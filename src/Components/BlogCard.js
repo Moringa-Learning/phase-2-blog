@@ -10,7 +10,7 @@ function BlogCard(props){
       <img src={blogObject.image} alt="simple" />
       <div className='p-2'>
         <h4>{blogObject.title} </h4>
-        <p>{blogObject.blogdata} </p>
+        <p>{blogObject.blogdata.substring(0, 200)}{blogObject.blogdata.length >= 200 && '...'} </p>
         <Container fluid className='d-flex justify-content-between'>
           <span>{blogObject.postedDate} </span>
           <span>{blogObject.readTime} min read</span>

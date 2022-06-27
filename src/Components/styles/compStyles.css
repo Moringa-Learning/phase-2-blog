@@ -1,9 +1,63 @@
+#mainNav {
+  min-height: 100px;
+}
+
+#mainNav .navbar-brand {
+  font-weight: 600;
+  font-size: 42px;
+  -webkit-transform: rotate(-12deg);
+          transform: rotate(-12deg);
+}
+
+#mainNav .navbar-brand span {
+  color: blue;
+}
+
+#mainNav .nav-link {
+  font-size: 20px;
+  color: black;
+}
+
+#mainNav .nav-link:hover {
+  color: blue;
+}
+
 #headerCont {
-  height: 10vh;
+  height: 35vh;
+  background-color: rgba(0, 0, 255, 0.575);
+  position: relative;
+  color: white;
 }
 
 #headerCont h1 {
-  color: green;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+#headerCont p {
+  font-size: 20px;
+}
+
+#headerCont .custom-shape-divider-bottom-1656365442 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+#headerCont .custom-shape-divider-bottom-1656365442 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+#headerCont .custom-shape-divider-bottom-1656365442 .shape-fill {
+  fill: #FFFFFF;
 }
 
 .mainblog .blogCont {
@@ -24,5 +78,12 @@
 
 .mainblog .blogCont p {
   font-size: 16px;
+}
+
+#bloglisting li a {
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: black;
 }
 /*# sourceMappingURL=compStyles.css.map */

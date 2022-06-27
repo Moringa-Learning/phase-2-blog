@@ -15,7 +15,6 @@ function BlogCard(props){
           <span>{blogObject.postedDate} </span>
           <span>{blogObject.readTime}min read</span>
           <Link to={`/blogdetail/${blogObject.id}`}><Button variant='outline-secondary' size='sm'>Read More</Button>{' '}</Link>
-          
         </Container>
       </div>
     </Container>

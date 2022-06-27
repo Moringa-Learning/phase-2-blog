@@ -13,7 +13,7 @@ function BlogCard(props){
         <p>{blogObject.blogdata} </p>
         <Container fluid className='d-flex justify-content-between'>
           <span>{blogObject.postedDate} </span>
-          <span>{blogObject.readTime}min read</span>
+          <span>{blogObject.readTime} min read</span>
           <Link to={`/blogdetail/${blogObject.id}`}><Button variant='outline-secondary' size='sm'>Read More</Button>{' '}</Link>
         </Container>
       </div>

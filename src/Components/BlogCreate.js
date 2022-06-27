@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
-import Form from 'react-bootstrap/Form'
 import { nanoid } from 'nanoid'
 
 function BlogCreate(){
+  const current = new Date();
+
   const [errors, setErrors] = useState([])
   const [formData, setformData] = useState({
     id: nanoid(),
     image: '',
     blogdata: '',
     readtime: 0,
-    postedDate: '',
+    postedDate: `${current.getDate()}-${current.getMonth() + 1}-${current.getFullYear()}`,
     title: ''
   });
-  // const [submittedData, setSubmittedData] = useState([]);
 
   function handleChange(event) {
     const name = event.target.name;
@@ -28,25 +28,38 @@ function BlogCreate(){
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(formData)
-    // if (event.target.length > 0) {
-    //   const formData = { firstName: firstName, lastName: lastName };
-    //   const dataArray = [...submittedData, formData]
-    //   setSubmittedData(dataArray);
+    const blogUrl = 'https://phase2backend.herokuapp.com/blogs'
 
-    //   setErrors([])
-    // } else {
-    //   setErrors(['First Name is Required'])
-    // }
+    if (formData.title.length > 0) {
+      const reqOption = {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers:{
+          'Content-Type': 'application/json'
+        }
+      }
+
+      fetch(blogUrl, reqOption).then(res => res.text()).then(res => {
+        alert('Blog Saved Successfully')
+        console.log(formData)
+      }).catch(er => {
+        alert('Check Console Panel An Error Occured')
+        console.log('error', er)
+      })
+
+      setErrors([])
+    } else {
+      setErrors(['Recheck data entered and try again'])
+    }
   }
 
   return (
     <div>
       <h2>Create A New Blog</h2>
       <form onSubmit={handleSubmit}>
-        <input type="text" name='title' onChange={handleChange} value={formData.title} />
-        <input type="text" name='image' onChange={handleChange} value={formData.image} />
-        <input type="text" name='blogdata' onChange={handleChange} value={formData.blogdata} />
+        <input type="text" name='title' onChange={handleChange} placeholder='title' value={formData.title} />
+        <input type="text" name='image' onChange={handleChange} placeholder='image url' value={formData.image} />
+        <input type="text" name='blogdata' onChange={handleChange} placeholder='blogdata' value={formData.blogdata} />
         <input type="number" name='readtime' onChange={handleChange} value={formData.readtime} />
         <button type="submit">Submit</button>
       </form>

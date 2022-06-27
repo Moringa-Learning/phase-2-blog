@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import { nanoid } from 'nanoid'
+import { Form, Button, InputGroup, Container, Row, Col } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
+
 
 function BlogCreate(){
   const current = new Date();
@@ -13,6 +16,8 @@ function BlogCreate(){
     postedDate: `${current.getDate()}-${current.getMonth() + 1}-${current.getFullYear()}`,
     title: ''
   });
+  const navigate = useNavigate();
+
 
   function handleChange(event) {
     const name = event.target.name;
@@ -41,6 +46,7 @@ function BlogCreate(){
 
       fetch(blogUrl, reqOption).then(res => res.text()).then(res => {
         alert('Blog Saved Successfully')
+        navigate(`/blogdetail/${formData.id}`)
         console.log(formData)
       }).catch(er => {
         alert('Check Console Panel An Error Occured')
@@ -54,17 +60,44 @@ function BlogCreate(){
   }
 
   return (
-    <div>
-      <h2>Create A New Blog</h2>
-      <form onSubmit={handleSubmit}>
-        <input type="text" name='title' onChange={handleChange} placeholder='title' value={formData.title} />
-        <input type="text" name='image' onChange={handleChange} placeholder='image url' value={formData.image} />
-        <input type="text" name='blogdata' onChange={handleChange} placeholder='blogdata' value={formData.blogdata} />
-        <input type="number" name='readtime' onChange={handleChange} value={formData.readtime} />
-        <button type="submit">Submit</button>
-      </form>
-      {errors.length > 0 ? errors.map((error, index) => (<p key={index} style={{ color: "red" }}>{error}</p>)) : null}
-    </div>
+    <Container className="mt-5 pt-5">
+      <Row>
+        <Col md={3}></Col>
+        <Col md={7}>
+          <h2 className="text-center m-4">Create A New Blog</h2>
+          <Form onSubmit={handleSubmit}>
+            <InputGroup className="mb-3">
+              <InputGroup.Text id="blogTitle">Blog Title</InputGroup.Text>
+              <Form.Control type="text" name='title' onChange={handleChange} value={formData.title} placeholder="Blog Title" aria-label="Blog Title" aria-describedby="blogTitle" />
+            </InputGroup>
+
+            <InputGroup className="mb-3">
+              <InputGroup.Text id="blogimagUrl">Blog Image Url</InputGroup.Text>
+              <Form.Control type="text" name='image' onChange={handleChange} value={formData.image} placeholder="Blog Image Url" aria-label="Blog Image Url" aria-describedby="blogimagUrl" />
+            </InputGroup>
+
+            <InputGroup className="mb-3">
+              <InputGroup.Text id="blogcontent">Blog Content</InputGroup.Text>
+              <Form.Control as="textarea" name='blogdata' onChange={handleChange} value={formData.blogdata} placeholder="Blog Content" aria-label="Blog Content" aria-describedby="blogcontent" />
+            </InputGroup>
+
+            <InputGroup className="mb-3">
+              <InputGroup.Text id="blogreadtime">Blog Read Time</InputGroup.Text>
+              <Form.Control type="number" name='readtime' onChange={handleChange} value={formData.readtime} placeholder="Blog Read Time" aria-label="Blog Read Time" aria-describedby="blogreadtime" />
+            </InputGroup>
+
+            <div className="d-flex justify-content-center align-items-center">
+              <Button variant="success" type="submit">
+                Post Blog
+              </Button>
+            </div>
+          </Form>
+
+          {errors.length > 0 ? errors.map((error, index) => (<p key={index} style={{ color: "red" }}>{error}</p>)) : null}
+        </Col>
+        <Col md={3}></Col>
+      </Row>
+    </Container>
 
   )
 }

@@ -20,8 +20,8 @@ function TopBlog(){
 
   return (
     <>
-      <div>Top Blogs</div>
-      <ul>
+      <h4>Top Blogs</h4>
+      <ul id="bloglisting">
         {blogs}
       </ul>
     </>

@@ -13,10 +13,10 @@ function App() {
     <>
     <Navigationbar />
     <Routes>
-      <Route exact path='/blogdetail/:id' element={<BlogDetail />} />
-      <Route exact path='/postblog' element={<BlogCreate />} />
-      <Route exact path='/' element={<Home />} />
-      <Route path='*' element={<NotFound />} />
+        <Route exact path='/phase-2-blog//blogdetail/:id' component={<BlogDetail />} />
+        <Route exact path='/phase-2-blog//postblog' component={<BlogCreate />} />
+        <Route exact path='/phase-2-blog/' component={<Home />} />
+        <Route path='*' component={<NotFound />} />
     </Routes>
     </>
   );

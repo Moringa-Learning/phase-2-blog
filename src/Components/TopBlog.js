@@ -15,7 +15,7 @@ function TopBlog(){
   }, [])
 
   const blogs = blogList.map(blogitem => {
-    return <li><Link to={`/blogdetail/${blogitem.id}`}>{blogitem.title}</Link></li>
+    return <li><Link to={`/phase-2-blog/blogdetail/${blogitem.id}`}>{blogitem.title}</Link></li>
   })
 
   return (

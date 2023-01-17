@@ -3,7 +3,7 @@ import './styles/compStyles.css'
 import BlogCard from "./BlogCard"
 
 function Blog(){
-  const blogUrl = 'https://phase2backend.herokuapp.com/blogs'
+  const blogUrl = 'http://localhost:9003/blogs'
 
   const [ blogList, setblogList ] = useState([])
 

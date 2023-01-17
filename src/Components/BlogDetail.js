@@ -7,7 +7,7 @@ function BlogDetail(){
   const [ blogObject, setblogObject ] = useState()
 
   useEffect(()=>{
-    const blogUrl = `https://phase2backend.herokuapp.com/blogs/${id}`
+    const blogUrl = `http://localhost:9003/blogs/${id}`
     console.log('working'+id)
     fetch(blogUrl).then(res => res.json()).then(reps => setblogObject(reps))
   },[id])

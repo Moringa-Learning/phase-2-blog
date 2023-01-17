@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {Link} from "react-router-dom"
 
 function TopBlog(){
-  const blogUrl = 'https://phase2backend.herokuapp.com/blogs'
+  const blogUrl = 'http://localhost:9003/blogs'
 
   const [blogList, setblogList] = useState([])
 

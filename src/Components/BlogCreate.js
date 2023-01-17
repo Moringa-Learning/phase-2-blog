@@ -33,7 +33,7 @@ function BlogCreate(){
 
   function handleSubmit(event) {
     event.preventDefault();
-    const blogUrl = 'https://phase2backend.herokuapp.com/blogs'
+    const blogUrl = 'http://localhost:9003/blogs'
 
     if (formData.title.length > 0) {
       const reqOption = {

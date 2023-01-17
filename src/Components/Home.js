@@ -12,8 +12,8 @@ function Home() {
     <Header />
     <Container className='p-3'>
       <Row className='mt-5'>
-        <Col sm={6} md={12} lg={8}><Blog /></Col>
-        <Col sm={6} md={12} lg={4}><TopBlog /></Col>
+        <Col sm={12} md={12} lg={8}><Blog /></Col>
+        <Col sm={12} md={12} lg={4}><TopBlog /></Col>
       </Row>
     </Container>
     </>

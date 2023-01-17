@@ -14,7 +14,7 @@ function BlogCard(props){
         <Container fluid className='d-flex justify-content-between'>
           <span>{blogObject.postedDate} </span>
           <span>{blogObject.readTime} min read</span>
-          <Link to={`/phase-2-blog/blogdetail/${blogObject.id}`}><Button variant='outline-secondary' size='sm'>Read More</Button>{' '}</Link>
+          <Link to={`/blogdetail/${blogObject.id}`}><Button variant='outline-secondary' size='sm'>Read More</Button>{' '}</Link>
         </Container>
       </div>
     </Container>

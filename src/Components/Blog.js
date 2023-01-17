@@ -3,7 +3,7 @@ import './styles/compStyles.css'
 import BlogCard from "./BlogCard"
 
 function Blog(){
-  const blogUrl = 'https://phasetwoblog.cybpact.com/'
+  const blogUrl = 'https://blogbackendproject.cybpact.com/'
 
   const [ blogList, setblogList ] = useState([])
 

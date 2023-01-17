@@ -7,7 +7,7 @@ function BlogDetail(){
   const [ blogObject, setblogObject ] = useState()
 
   useEffect(()=>{
-    const blogUrl = `https://phasetwoblog.cybpact.com//${id}`
+    const blogUrl = `https://blogbackendproject.cybpact.com//${id}`
     console.log('working'+id)
     fetch(blogUrl).then(res => res.json()).then(reps => setblogObject(reps))
   },[id])

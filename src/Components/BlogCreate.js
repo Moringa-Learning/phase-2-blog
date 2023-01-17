@@ -33,7 +33,7 @@ function BlogCreate(){
 
   function handleSubmit(event) {
     event.preventDefault();
-    const blogUrl = 'http://localhost:9003/blogs'
+    const blogUrl = 'https://phasetwoblog.cybpact.com/'
 
     if (formData.title.length > 0) {
       const reqOption = {

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {Link} from "react-router-dom"
 
 function TopBlog(){
-  const blogUrl = 'http://localhost:9003/blogs'
+  const blogUrl = 'https://phasetwoblog.cybpact.com/'
 
   const [blogList, setblogList] = useState([])
 
